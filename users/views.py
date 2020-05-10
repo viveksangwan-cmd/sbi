@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from django.views.generic import CreateView,DetailView
 from .forms import CustomUserCreationForm
 from django.urls import reverse_lazy
@@ -10,8 +10,19 @@ class SignUpView(CreateView):
     success_url=reverse_lazy('login')
     template_name='signup.html'
 
+
+class UserDetailView(DetailView):
+    model=CustomUser
+    template_name='customerDetail.html'
+
+
+    def get_object(self):
+        return self.request.user
+
+'''
 def customerdetail(request):
     print(request.user.username,request.user.age,request.user.Lastname)
     return render(request,'customerDetail.html',
     {'username':request.user.username,'Firstname':request.user.Firstname,'Lastname':request.user.Lastname,'age':request.user.age,'Email_ID':request.user.Email_ID,
     })
+'''
