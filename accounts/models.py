@@ -11,6 +11,7 @@ class Account(models.Model):
 
     def __str__(self):
         return str(self.unique_no)+" "+str(self.account_number)
+
 class connectnew():
     def create_new_account_number(sender,**kwargs):
         if kwargs['created']:
