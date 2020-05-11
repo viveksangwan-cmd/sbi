@@ -8,3 +8,4 @@ class CustomUser(AbstractUser):
     age=models.PositiveIntegerField(null=True,blank=True)
     Email_ID= models.EmailField(max_length = 254,null=False,blank=False)
     unique_no=models.AutoField(primary_key=True)
+    

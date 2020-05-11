@@ -10,15 +10,13 @@
     {% if user.is_authenticated%}
     <ul class="nav nav-pills">
       <li class="nav-item">
-       <a href="{%url 'logout'%}" class="nav-link ">logout</a>
+        <a href="{%url 'logout'%}" class="nav-link ">logout</a>
       </li>
     </ul>
     {%endif%}
-  </br>
-        {% block content %}
-
-        {% endblock content %}
-    </div>
+</br>
+    {%block content%}
+    {%endblock content%}
   </main>
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
