@@ -7,6 +7,14 @@
 </head>
 <body>
   <main>
+    {% if user.is_authenticated%}
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+       <a href="{%url 'logout'%}" class="nav-link ">logout</a>
+      </li>
+    </ul>
+    {%endif%}
+  </br>
         {% block content %}
 
         {% endblock content %}
