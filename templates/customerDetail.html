@@ -5,3 +5,6 @@
 <h2>Last name: {{object.Lastname}}</h2>
 <h2>Age: {{object.age}}</h2>
 <h2>Email Id : {{object.Email_ID}}</h2>
+{% if object.account%}
+<h2>Account no : {{object.account.account_number}}</h2>
+{%endif%}
