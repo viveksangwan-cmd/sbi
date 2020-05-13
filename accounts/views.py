@@ -11,7 +11,7 @@ class Debit(LoginRequiredMixin):
         amount=request.POST['amount']
         if amount!='':
             amount=int(request.POST['amount'])
-            my_account=Account.objects.get(owner=request.user)
+            my_account=Account.objects.get(unique_no=request.user)
             print(my_account)
             print("before : ",my_account.balance)
             if amount>my_account.balance:
@@ -28,7 +28,7 @@ class Credit(LoginRequiredMixin):
         amount=request.POST['amount']
         if amount!='':
             amount=int(request.POST['amount'])
-            my_account=Account.objects.get(owner=request.user)
+            my_account=Account.objects.get(unique_no=request.user)
             print(my_account)
             print("before : ",my_account.balance)
             my_account.balance+=amount
@@ -37,5 +37,5 @@ class Credit(LoginRequiredMixin):
         return redirect('account')
 class Balance(LoginRequiredMixin):
     def balance(request):
-        my_account=Account.objects.get(owner=request.user)
+        my_account=Account.objects.get(unique_no=request.user)
         return render(request,'accounts/balance.html',{'balance':my_account.balance})
