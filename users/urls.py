@@ -8,5 +8,4 @@ urlpatterns=[
     path('signup/',SignUpView.as_view(),name='signup'),
     path('detail/',UserDetailView.as_view(),name='customerdetail'),
     path('',TemplateView.as_view(template_name='customer.html'),name='customer'),
-
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
