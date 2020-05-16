@@ -1,0 +1,16 @@
+<html>
+<body>
+    <h1>Transfer Successful</h1>
+    <p>You will be redirected in </p><div id="counter">5</div><p>secounds ....</p>
+    <script>
+        setInterval(function() {
+            var div = document.querySelector("#counter");
+            var count = div.textContent * 1 - 1;
+            div.textContent = count;
+            if (count <= 0) {
+                window.location.replace("{% url 'account'%}");
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

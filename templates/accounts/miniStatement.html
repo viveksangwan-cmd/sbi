@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+{%block content%}
+<h1>Mini-Statement</h1>
+<table class="table" id="miniStatement">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Account No</th>
+      <th scope="col">Transaction Type</th>
+      <th scope="col">Amount Transfered</th>
+      <th scope="col">Initial Amount</th>
+      <th scope="col">Final Amount</th>
+    </tr>
+    </thead>
+  <tbody>
+{% for i in data%}
+    <tr>
+      <td>{{i.no}}</td>
+      <td>{{i.transaction_type}}</td>
+      <td>{{i.amount_transfered_to}}</td>
+      <td>{{i.Initial_amount}}</td>
+      <td>{{i.Final_amount}}</td>
+    </tr>
+{%endfor%}
+  </tbody>
+</table>
+{%endblock content%}

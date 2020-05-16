@@ -1,5 +1,21 @@
+<script>
+function myFunction() {
+  var amount=document.getElementById('amount').value
+  if ( amount==null ||amount == "")
+  {
+    alert("Amount is not valid.");
+    event.preventDefault();
+    return False;
+  }
+  else {
+    return True;
+
+  }
+}
+</script>
+
 <h1>Debit</h1>
-<form class="" action="debitnow" method="post">{% csrf_token%}
-  <h2>Enter amount : <input type="number" name="amount" value=""></input></h2>
+<form  action="debitnow" onsubmit="return myFunction();" method="post">{% csrf_token%}
+  <h2>Enter amount : <input type="number"  id="amount" name="amount" value=""></input></h2>
 <button type="submit" name="button">Debit</button>
 </form>

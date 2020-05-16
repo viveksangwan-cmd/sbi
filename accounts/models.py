@@ -14,9 +14,9 @@ class Account(models.Model):
         return str(self.unique_no)+" "+str(self.account_number)
 
 class connectnew():
+    all_accounts=[]
     @receiver(post_save,sender=CustomUser)
     def create_new_account(sender,instance,created,**kwargs):
         if created:
             account=Account.objects.create(unique_no=instance)
-
     post_save.connect(create_new_account,sender=CustomUser)
