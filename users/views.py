@@ -22,7 +22,7 @@ class SignUpView():
 class UserDetailView(LoginRequiredMixin,DetailView):
     model=CustomUser
     template_name='customerDetail.html'
-
+    login_url='home'
 
     def get_object(self):
         return self.request.user
