@@ -7,7 +7,7 @@ from django.db import connection
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import login,authenticate
 
-class SignUpView(LoginRequiredMixin):
+class SignUpView():
     def signup_view(request):
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
