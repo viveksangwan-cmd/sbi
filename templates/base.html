@@ -5,9 +5,7 @@
     <link herf="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{%static 'static_new/css/base.css' %}">
-    <script type="text/javascript" src="{%static 'static_new/js/jquery.js'%}" >
-
-    </script>
+    <script type="text/javascript" src="{%static 'static_new/js/jquery.js'%}" ></script>
 </head>
 <body>
   <main>
@@ -22,7 +20,10 @@
               <a href="{%url 'home'%}" class="nav-link active">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a href="{%url 'home'%}" class="nav-link active">Contact<span class="sr-only">(current)</span></a>
+              <a href="{%url 'customer'%}" class="nav-link active">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a href="{%url 'contact'%}" class="nav-link active">Contact<span class="sr-only">(current)</span></a>
             </li>
               {% if user.is_authenticated%}
                 <li class="nav-item">

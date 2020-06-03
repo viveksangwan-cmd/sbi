@@ -1,3 +1,6 @@
+{%extends 'base.html'%}
+{%block title%}Debit Fund{%endblock title%}
+{%block content%}
 <script>
 function myFunction() {
   var amount=document.getElementById('amount').value
@@ -19,3 +22,4 @@ function myFunction() {
   <h2>Enter amount : <input type="number"  id="amount" name="amount" value=""></input></h2>
 <button type="submit" name="button">Debit</button>
 </form>
+{%endblock content%}

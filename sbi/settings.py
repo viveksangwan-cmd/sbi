@@ -134,3 +134,11 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 AUTH_USER_MODEL='users.CustomUser'
 LOGIN_REDIRECT_URL='customer'
 LOGOUT_REDIRECT_URL='home'
+
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_FROM='viveksangwan006@gmail.com'
+EMAIL_HOST='smtp.sendgrid.net'
+EMAIL_HOST_USER='apikey'
+EMAIL_HOST_PASSWORD='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'
+EMAIL_PORT=587
+EMAIL_USE_TLS=True

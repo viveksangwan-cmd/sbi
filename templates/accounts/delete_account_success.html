@@ -3,7 +3,7 @@
 {%block content%}
 <html>
 <body>
-    <h1>Transfer Successful</h1>
+    <h1>Account Deleted</h1>
     <p>You will be redirected in </p><div id="counter">5</div><p>secounds ....</p>
     <script>
         setInterval(function() {
@@ -11,7 +11,7 @@
             var count = div.textContent * 1 - 1;
             div.textContent = count;
             if (count <= 0) {
-                window.location.replace("{% url 'account'%}");
+                window.location.replace("{% url 'home'%}");
             }
         }, 1000);
     </script>

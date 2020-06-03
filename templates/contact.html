@@ -1,0 +1,59 @@
+{%extends 'base.html'%}
+{%block title%}Contact{%endblock title%}
+{%block content%}
+<h1 class="mb-sm-4 text-center">Contact</h1>
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h4>Address:</h4>
+            <address>
+              <strong>Bank Of Street</strong><br>
+              Sector - 17 ,<br>
+              Pratap Nagar, Jaipur 302033<br>
+              <abbr title="Phone No">P:</abbr> <a href="tel:+098168934317">(+09)81689-34317</a><br>
+              <abbr title="Mail">M:</abbr> <a href="mailto:viveksangwan006@gmail.com">manager@bank.com</a>
+            </address>
+          </div>
+          <div class="col-12 col-lg-6 mb-3"">
+            <h4>Opening hours:</h4>
+            <p>
+              Monday-Thursday : 10 am - 4 pm<br>
+              Friday-Saturday : 10 am - 6 pm<br>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-3">
+            <h4>Send us a message:</h4>
+            <form>
+              <div class="row">
+                <div class="col-12 col-sm-6">
+                  <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" class="form-control" placeholder="Name" required>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" class="form-control" placeholder="example@email.com" required>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-6">
+                  <div class="form-group">
+                    <label for="telephone">Mobile Number:</label>
+                    <input type="tel" id="telephone" class="form-control" placeholder="8168934317">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="textarea">Message:</label>
+                <textarea id="textarea" class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
+              </div>
+              <button type="submit"  class="btn btn-primary">Submit</button>
+              <button type="reset" class="btn btn-secondary">Reset</button>
+            </form>
+          </div>
+        </div>
+{%endblock content%}

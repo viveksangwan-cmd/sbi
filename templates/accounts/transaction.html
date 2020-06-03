@@ -1,3 +1,6 @@
+{%extends 'base.html'%}
+{%block title%}Tranfer Funds{%endblock title%}
+{%block content%}
 <script>
 function myFunction()
 {
@@ -18,10 +21,11 @@ function myFunction()
 </script>
 
 
-<h1>Transfer Amount</h1>
+<h1>Transfer Fund</h1>
 <form class="" onsubmit="myFunction();" action="trsanction_now" method="post">{% csrf_token%}
   <h2>Account Holder Username : <input type="name" id="username" name="username" value=""></input></h2>
   <h2>Account No : <input type="number" id="account" name="account_no" value=""></input></h2>
   <h2>Amount : <input type="number" id="amount" name="amount" value=""></input></h2>
 <button type="submit" name="button">Transfer</button>
 </form>
+{%endblock content%}

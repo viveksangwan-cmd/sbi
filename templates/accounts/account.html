@@ -1,4 +1,6 @@
-{%load static%}
+{%extends 'base.html'%}
+{%block title%}Account{%endblock title%}
+{%block content%}
 <h1>Account</h1>
 <ol>
   <li><h2><a href="{% url 'balance'%}">Balance Check</a></h2></li>
@@ -8,3 +10,4 @@
   <li><h2><a href="{%url 'miniStatement'%}">Mini-Statement</a></h2></li>
   <li><h2><a href="{%url 'passbook'%}">Passbook</a></h2></li>
 </ol>
+{%endblock content%}

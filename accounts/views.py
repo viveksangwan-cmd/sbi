@@ -87,9 +87,10 @@ def debit(request):
         print("After ",my_account.balance)
     return redirect('account')
 
-@login_required(login_url='home')
+@login_required(login_url='home.html')
 def credit(request):
     amount=request.POST['amount']
+    print("Hii")
     if amount!='':
         amount=int(request.POST['amount'])
         my_account=Account.objects.get(unique_no=request.user)

@@ -1,9 +1,42 @@
-<h1>Profile :</h1>
-<h2>Username: {{object.username}}</h2>
-<h2>First name: {{object.Firstname}}</h2>
-<h2>Last name: {{object.Lastname}}</h2>
-<h2>Age: {{object.age}}</h2>
-<h2>Email Id : {{object.Email_ID}}</h2>
-{% if object.account%}
-<h2>Account no : {{object.account.account_number}}</h2>
-{%endif%}
+{%extends 'base.html'%}
+{%block title%}Profile{%endblock title%}
+
+{%block content%}
+<div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-8 col-md-6 col-lg-4 offset-sm-2 offset-md-3 offset-lg-4">
+              <h1 class="mb-3 text-center">User Profile</h1>
+              <form class="mb-3">
+                <div class="form-group">
+                  <label for="email">Username:</label>
+                  <h1 class="form-control">{{object.username}}</h1>
+                </div>
+                <div class="form-group">
+                  <label for="email">First Name:</label>
+                  <h1 class="form-control">{{object.Firstname}}</h1>
+                </div>
+                <div class="form-group">
+                  <label for="email">Last Name:</label>
+                  <h1 class="form-control">{{object.Lastname}}</h1>
+                </div>
+                <div class="form-group">
+                  <label for="email">Age:</label>
+                  <h1 class="form-control">{{object.age}}</h1>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <h1 class="form-control">{{object.Email_ID}}</h1>
+                </div>
+                {% if object.account%}
+                <div class="form-group">
+                  <label for="email">Account no:</label>
+                  <h1 class="form-control">{{object.account.account_number}}</h1>
+                </div>
+                {%endif%}
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+{%endblock content%}
