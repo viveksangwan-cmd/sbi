@@ -1,6 +1,17 @@
 {%extends 'base.html'%}
+{%block script%}
+<script>
+function print_recipet()
+{
+print()
+}
+</script>
+{%endblock script%}
 {%block content%}
 <h1>Mini-Statement</h1>
+<form class="" onsubmit="return print_recipet();" method="post">{%csrf_token%}
+  <button type="submit" name="button">print</button>
+</form>
 <table class="table" id="miniStatement">
   <thead class="thead-dark">
     <tr>

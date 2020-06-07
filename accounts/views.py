@@ -72,7 +72,7 @@ def transfer(request):
 def debit(request):
     amount=request.POST['amount']
     if amount!='':
-        amount=int(request.POST['amount'])
+        amount=abs(int(request.POST['amount']))
         my_account=Account.objects.get(unique_no=request.user)
         print(my_account)
         initial=my_account.balance
@@ -92,7 +92,7 @@ def credit(request):
     amount=request.POST['amount']
     print("Hii")
     if amount!='':
-        amount=int(request.POST['amount'])
+        amount=abs(int(request.POST['amount']))
         my_account=Account.objects.get(unique_no=request.user)
         print(my_account)
         print("hiii :",my_account.account_number)

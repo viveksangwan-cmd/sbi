@@ -4,9 +4,16 @@
 <script>
 function myFunction() {
   var amount=document.getElementById('amount').value
-  if ( amount==null ||amount == "")
+  var amount2=document.getElementById('amount2').value
+  if ( amount==null ||amount == "" || amount2==null ||amount2 == "")
   {
     alert("Amount is not valid.");
+    event.preventDefault();
+    return False;
+  }
+  else if(amount!=amount2)
+  {
+    alert("Amount is not same.");
     event.preventDefault();
     return False;
   }
@@ -20,6 +27,7 @@ function myFunction() {
 <h1>Debit</h1>
 <form  action="debitnow" onsubmit="return myFunction();" method="post">{% csrf_token%}
   <h2>Enter amount : <input type="number"  id="amount" name="amount" value=""></input></h2>
+  <h2>confirm amount : <input type="number"  id="amount2" name="amount2" value=""></input></h2>
 <button type="submit" name="button">Debit</button>
 </form>
 {%endblock content%}
