@@ -5,6 +5,7 @@ from .models import Account
 from passbook.views import return_mini_statement,return_passbook_statement,update_entry
 from users.models import CustomUser
 from django.contrib.auth.decorators import login_required
+from django.urls import reverse_lazy
 
 @login_required(login_url='home')
 def passbook(request):

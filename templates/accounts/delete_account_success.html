@@ -1,5 +1,5 @@
 {%extends 'base.html'%}
-{%block title%}TrsnferSuccess{%endblock title%}
+{%block title%}Account Delete{%endblock title%}
 {%block content%}
 <html>
 <body>
@@ -11,7 +11,7 @@
             var count = div.textContent * 1 - 1;
             div.textContent = count;
             if (count <= 0) {
-                window.location.replace("{% url 'home'%}");
+                window.location.replace("{% url 'login'%}");
             }
         }, 1000);
     </script>
