@@ -4,19 +4,13 @@
 <script>
 function myFunction() {
   var password=document.getElementById('password').value
-  var password2=document.getElementById('password2').value
-  if ( password==null ||password == "" || password2==null || password2 == "")
+  if ( password==null ||password == "")
   {
     alert("Password is not valid.");
     event.preventDefault();
     return False;
   }
-  else if (password!=password2)
-  {
-    alert("Password and confirm pasword id not matching.")
-    event.preventDefault();
-    return False;
-  }
+  
   else {
     return True;
 
@@ -27,7 +21,6 @@ function myFunction() {
 <h2>To delete your account , Please confirm your indentity by entring your password.</h2>
 <form  action="delete_account_now" onsubmit=" return myFunction();" method="post">{% csrf_token%}
   <h2>Enter Password : <input type="" id="password" name="password" value=""></input></h2>
-  <h2>Confirm Password : <input type="" id="password2" name="password2" value=""></input></h2>
 <button type="submit"  name="button">Close Account</button>
 </form>
 {%endblock content%}
